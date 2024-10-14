@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-export default function App() {
+const register= () => {
   return (
     <View style={styles.container}>
-      <Text> Bienvenido $Julian $Lavera Llauro</Text>
+      <TextInput style={styles.container} placeholder='Ingrese usuario.'/>
+      <TextInput style={styles.container} placeholder='Ingrese apellido.'/>
+      <TextInput style={styles.container} placeholder='Ingrese contraseña.'/>
       <StatusBar style="auto" />
     </View>
   );
@@ -21,3 +23,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+export default register;
