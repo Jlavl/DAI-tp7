@@ -16,6 +16,8 @@ const App =() => {
        options={{title: 'welcome'}}
       />
       <Stack.Screen name="Login" component={LoginScreen}/>
+      <Stack.Screen name="Registrar" component={ResgisterScreen}/>
+
     </Stack.Navigator>
   </NavigationContainer>
 
