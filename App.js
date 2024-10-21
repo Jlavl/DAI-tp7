@@ -4,12 +4,21 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-export default function App() {
+const Stack = createStackNavigator();
+const App =() => {
   return (
-    <View style={styles.container}>
-      <Text> Bienvenido $Julian $Lavera Llauro</Text>
-      <StatusBar style="auto" />
-    </View>
+
+  <NavigationContainer>
+    <Stack.Navigator initialRouteName="LoginScreen">
+      <Stack.Screen 
+       name="Home"
+       component={HomeScreen}
+       options={{title: 'welcome'}}
+      />
+      <Stack.Screen name="Login" component={LoginScreen}/>
+    </Stack.Navigator>
+  </NavigationContainer>
+
   );
 }
 

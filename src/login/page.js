@@ -6,11 +6,18 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const login= () => {
   return (
-    <View style={styles.container}>
-      <TextInput style={styles.container} placeholder='Ingrese usuario.'/>
-      <TextInput style={styles.container} placeholder='Ingrese contraseña.'/>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <View style={styles.container}>
+        <TextInput style={styles.container} placeholder='Ingrese usuario.'/>
+        <TextInput style={styles.container} placeholder='Ingrese contraseña.'/>
+        <StatusBar style="auto" />
+      </View>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="LoginScreen">
+
+          </Stack.Navigator>
+        </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 
