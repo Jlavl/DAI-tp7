@@ -1,30 +1,38 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 /* https://reactnavigation.org/docs/hello-react-navigation */
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
-const Stack = createNativeStackNavigator();
-
 function LoginScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Login Screen</Text>
+      <Button
+        title="Register"
+        onPress={() => navigation.navigate('RegisterScreen')}
+      />
     </View>
   );
 }
+const Stack = createNativeStackNavigator();
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Register"
+        onPress={() => navigation.navigate('RegisterScreen')}
+      />
+    </View>
+  );
+}
+
 function ResgisterScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Login Screen</Text>
+      <Text>Register Screen</Text>
     </View>
   );
 }
