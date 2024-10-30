@@ -5,6 +5,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 /* https://reactnavigation.org/docs/hello-react-navigation */
+/*-----------------------------------------------------------------------------------*/
+
 function LoginScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -17,6 +19,8 @@ function LoginScreen() {
   );
 }
 const Stack = createNativeStackNavigator();
+/*-----------------------------------------------------------------------------------*/
+
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -28,7 +32,7 @@ function HomeScreen() {
     </View>
   );
 }
-
+/*-----------------------------------------------------------------------------------*/
 function ResgisterScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
